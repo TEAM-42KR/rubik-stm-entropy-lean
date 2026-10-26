@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software if you use the formalization."
+title: "Rubik cube diameter in the slice-turn metric: Lean formalization"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Na
+    given-names: Sungsoo
+    affiliation: "TEAM42 Inc., Seoul, Republic of Korea"
+    orcid: "https://orcid.org/0009-0005-5257-3374"

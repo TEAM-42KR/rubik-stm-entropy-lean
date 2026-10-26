@@ -1,0 +1,17 @@
+name = "RubikSTM"
+version = "1.0.0"
+defaultTargets = ["RubikSTM", "Main", "AxiomCheck"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "RubikSTM"
+
+[[lean_lib]]
+name = "Main"
+
+[[lean_lib]]
+name = "AxiomCheck"

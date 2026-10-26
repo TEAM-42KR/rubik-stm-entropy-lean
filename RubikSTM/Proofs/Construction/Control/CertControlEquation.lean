@@ -1,0 +1,10 @@
+import Mathlib
+import RubikSTM.Definitions.Construction.Control.K
+set_option autoImplicit false
+set_option maxRecDepth 4096
+set_option maxHeartbeats 2000000
+open RubikConstruction.Control
+theorem proof_RubikConstruction_Control_cert_control_equation (i : CertIndex) :
+    certPerm i = if certPositive i then control (certControlIndex i)
+      else (control (certControlIndex i))⁻¹ := by
+  fin_cases i <;> decide
