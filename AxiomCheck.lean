@@ -1,3 +1,4 @@
+import RubikSTM.OBTMDiameter
 import RubikSTM.Diameter
 import Main
 import Lean
@@ -10,7 +11,9 @@ elab "#check_axioms" : command => do
   let expected : List Name := []
 
   let heads : List (Name × Bool) := [(``RubikSTM.rubik_stm_diameter_entropy, false),
-    (``rubik_stm_diameter_entropy, false)]
+    (``rubik_stm_diameter_entropy, false),
+    (``RubikSTM.rubik_obtm_diameter_entropy, false),
+    (``rubik_obtm_diameter_entropy, false)]
   for (h, allowSorry) in heads do
     let axs := (← liftCoreM <| Lean.collectAxioms h).toList
     logInfo m!"Axioms {h}: {axs}"

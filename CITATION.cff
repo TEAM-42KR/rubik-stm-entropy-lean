@@ -1,11 +1,13 @@
 cff-version: 1.2.0
 message: "Please cite this software if you use the formalization."
-title: "Rubik cube diameter in the slice-turn metric: Lean formalization"
+title: "The asymptotic diameter of the n x n x n Rubik's Cube in the slice-turn and outer-block-turn metrics: Lean formalization"
 type: software
-version: 1.0.0
+version: 1.1.0
 license: MIT
 authors:
   - family-names: Na
     given-names: Sungsoo
     affiliation: "TEAM42 Inc., Seoul, Republic of Korea"
     orcid: "https://orcid.org/0009-0005-5257-3374"
+
+doi: 10.5281/zenodo.23658175

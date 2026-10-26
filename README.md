@@ -1,6 +1,6 @@
-# Rubik cube diameter in the slice-turn metric
+# The asymptotic diameter of the n x n x n Rubik's Cube in the slice-turn and outer-block-turn metrics
 
-Version 1.0.0.
+Version 1.1.0.
 
 Lean 4 formalization of the entropy-sharp asymptotic diameter of the n by n by n
 six-colour reachable-sticker position graph. A move turns one slice by 90, 180 or
@@ -21,6 +21,18 @@ The definitions are in `RubikSTM/Definitions/Geometry/StmGraph.lean`.
 The theorem is in `RubikSTM/Diameter.lean`; `Main.lean` also exports the alias
 `rubik_stm_diameter_entropy`.
 
+## Outer-block-turn theorem
+
+```lean
+theorem RubikSTM.rubik_obtm_diameter_entropy :
+    Filter.Tendsto RubikOBTM.normalizedDiameter Filter.atTop (nhds Rubik.entropyConstant)
+```
+
+An outer-block turn turns a contiguous block of slices adjacent to a face.
+The new theorem is in `RubikSTM/OBTMDiameter.lean`; `Main.lean` exports
+`rubik_obtm_diameter_entropy`. The original slice-turn declarations and
+their proofs are unchanged.
+
 ## Build
 
 Install Lean through elan, then run from the repository root:
@@ -33,7 +45,7 @@ Lean is pinned to `v4.33.1` and Mathlib to commit
 `0df444a360eaa60ab8c11dca51a86af692955474`. The dependency manifest fixes the
 remaining packages. Keep these pins when rebuilding.
 
-`AxiomCheck.lean` is part of the default build. It checks that both exported
+`AxiomCheck.lean` is part of the default build. It checks that all four exported
 theorems use only `propext`, `Classical.choice` and `Quot.sound`, and rejects any
 declaration in the library that directly uses `sorryAx`. `Check.lean` prints the
 theorem types and their axioms. The Lean kernel, the stated definitions and the
@@ -43,7 +55,7 @@ trusts those prebuilt files.
 The library is organised into definitions, lemmas and proofs, with subdirectories
 for geometry, permutation actions, probability, word construction and asymptotics.
 
-Paper and supplementary material: https://doi.org/10.5281/zenodo.23655390
+Paper and supplementary material: https://doi.org/10.5281/zenodo.23658175
 
 ## Author and licence
 
