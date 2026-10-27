@@ -1,13 +1,28 @@
 cff-version: 1.2.0
 message: "Please cite this software if you use the formalization."
-title: "The asymptotic diameter of the n x n x n Rubik's Cube in the slice-turn and outer-block-turn metrics: Lean formalization"
+title: "Entropy-sharp diameters and solved-state worst cases of the n x n x n Rubik's Cube: Lean formalization"
 type: software
-version: 1.1.0
+version: 1.2.0
+date-released: 2026-10-27
 license: MIT
+repository-code: "https://github.com/TEAM-42KR/rubik-stm-entropy-lean"
+url: "https://github.com/TEAM-42KR/rubik-stm-entropy-lean/tree/v1.2.0"
+abstract: >-
+  Software version 1.2.0 adds four STM and proper-OBTM solved-state entropy-limit
+  theorems to the unchanged diameter formalization. The paper and Zenodo record
+  stay at version 1.1; their DOI below does not archive software version 1.2.0.
 authors:
   - family-names: Na
     given-names: Sungsoo
     affiliation: "TEAM42 Inc., Seoul, Republic of Korea"
     orcid: "https://orcid.org/0009-0005-5257-3374"
-
-doi: 10.5281/zenodo.23658175
+references:
+  - type: article
+    title: "The asymptotic diameter of the n x n x n Rubik's Cube in the slice-turn and outer-block-turn metrics"
+    version: "1.1"
+    doi: 10.5281/zenodo.23658175
+    authors:
+      - family-names: Na
+        given-names: Sungsoo
+        affiliation: "TEAM42 Inc., Seoul, Republic of Korea"
+        orcid: "https://orcid.org/0009-0005-5257-3374"

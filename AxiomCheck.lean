@@ -13,7 +13,15 @@ elab "#check_axioms" : command => do
   let heads : List (Name × Bool) := [(``RubikSTM.rubik_stm_diameter_entropy, false),
     (``rubik_stm_diameter_entropy, false),
     (``RubikSTM.rubik_obtm_diameter_entropy, false),
-    (``rubik_obtm_diameter_entropy, false)]
+    (``rubik_obtm_diameter_entropy, false),
+    (``RubikSTM.rubik_stm_solved_radius_entropy, false),
+    (``rubik_stm_solved_radius_entropy, false),
+    (``RubikSTM.rubik_stm_solved_looking_radius_entropy, false),
+    (``rubik_stm_solved_looking_radius_entropy, false),
+    (``RubikSTM.rubik_obtm_solved_radius_entropy, false),
+    (``rubik_obtm_solved_radius_entropy, false),
+    (``RubikSTM.rubik_obtm_solved_looking_radius_entropy, false),
+    (``rubik_obtm_solved_looking_radius_entropy, false)]
   for (h, allowSorry) in heads do
     let axs := (← liftCoreM <| Lean.collectAxioms h).toList
     logInfo m!"Axioms {h}: {axs}"
